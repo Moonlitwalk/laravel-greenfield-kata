@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    /** @use HasFactory<\Database\Factories\PostFactory> */
-    use HasFactory;
+  use HasFactory;
+  protected $fillable = [
+    'title',
+    'body'
+  ];
 }
