@@ -9,4 +9,10 @@ class Board extends Model
 {
     /** @use HasFactory<\Database\Factories\BoardFactory> */
     use HasFactory;
+
+    protected $fillable =['name', 'description'];
+
+    public function tickets(){
+        return $this->hasMany(Ticket::class);
+    }
 }
